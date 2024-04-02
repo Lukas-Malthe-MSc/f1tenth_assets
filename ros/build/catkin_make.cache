@@ -1,0 +1,2 @@
+Assembly_description:Assembly_description_2
+-DCATKIN_DEVEL_PREFIX=/run/host/home/lukasmalthe/Repositories/f1tenth_decription/devel -DCMAKE_INSTALL_PREFIX=/run/host/home/lukasmalthe/Repositories/f1tenth_decription/install -G Unix Makefiles

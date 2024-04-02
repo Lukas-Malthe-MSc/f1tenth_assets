@@ -1,0 +1,8 @@
+prefix=/run/host/home/lukasmalthe/Repositories/f1tenth_decription/install
+
+Name: Assembly_description_2
+Description: Description of Assembly_description_2
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,198 @@
+<?xml version="1.0" ?>
+<robot name="f1tenth" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Assembly_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find Assembly_description)/urdf/Assembly.trans" />
+<xacro:include filename="$(find Assembly_description)/urdf/Assembly.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.25842960269512494 0.1300065695163831 0.017821626738037465" rpy="0 0 0"/>
+    <mass value="4.156457046473223"/>
+    <inertia ixx="0.013034" iyy="0.084094" izz="0.095033" ixy="-6e-06" iyz="0.0" ixz="0.000867"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file:////home/msc-gang/ros_noetic/src/Assembly_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="blue"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file:////home/msc-gang/ros_noetic/src/Assembly_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rotator_left_1">
+  <inertial>
+    <origin xyz="5.107363362233386e-07 0.003934914786975663 0.01800001400288645" rpy="0 0 0"/>
+    <mass value="0.09154101472024741"/>
+    <inertia ixx="1.1e-05" iyy="7e-06" izz="1e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.478955 -0.253074 -0.008" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file:////home/msc-gang/ros_noetic/src/Assembly_description/meshes/rotator_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="blue"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.478955 -0.253074 -0.008" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file:////home/msc-gang/ros_noetic/src/Assembly_description/meshes/rotator_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rotator_right_1">
+  <inertial>
+    <origin xyz="5.109449456308646e-07 -0.0039356889065224965 0.01800001400229651" rpy="0 0 0"/>
+    <mass value="0.0915410147202475"/>
+    <inertia ixx="1.1e-05" iyy="7e-06" izz="1e-05" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.478955 -0.007025 -0.008" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file:////home/msc-gang/ros_noetic/src/Assembly_description/meshes/rotator_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="blue"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.478955 -0.007025 -0.008" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file:////home/msc-gang/ros_noetic/src/Assembly_description/meshes/rotator_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_back_left_1">
+  <inertial>
+    <origin xyz="2.6808355396701344e-09 -0.004873834232398566 -1.6533018669384614e-09" rpy="0 0 0"/>
+    <mass value="1.8001224559704576"/>
+    <inertia ixx="0.001935" iyy="0.003387" izz="0.001935" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.114 -0.2698 -0.0205" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file:////home/msc-gang/ros_noetic/src/Assembly_description/meshes/wheel_back_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.114 -0.2698 -0.0205" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file:////home/msc-gang/ros_noetic/src/Assembly_description/meshes/wheel_back_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_back_right_1">
+  <inertial>
+    <origin xyz="2.8894521220124147e-09 0.004873835811921283 1.787412350073847e-09" rpy="0 0 0"/>
+    <mass value="1.8001224559704576"/>
+    <inertia ixx="0.001935" iyy="0.003387" izz="0.001935" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.114 0.0098 -0.0205" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file:////home/msc-gang/ros_noetic/src/Assembly_description/meshes/wheel_back_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.114 0.0098 -0.0205" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file:////home/msc-gang/ros_noetic/src/Assembly_description/meshes/wheel_back_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_front_left_1">
+  <inertial>
+    <origin xyz="4.701106859905657e-07 -0.004874166721957118 -1.6533018391828858e-09" rpy="0 0 0"/>
+    <mass value="1.8001224559704576"/>
+    <inertia ixx="0.001935" iyy="0.003387" izz="0.001935" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.478955 -0.274374 -0.026" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file:////home/msc-gang/ros_noetic/src/Assembly_description/meshes/wheel_front_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.478955 -0.274374 -0.026" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file:////home/msc-gang/ros_noetic/src/Assembly_description/meshes/wheel_front_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_front_right_1">
+  <inertial>
+    <origin xyz="4.7031929567564745e-07 0.004873392602410289 1.7874124819128312e-09" rpy="0 0 0"/>
+    <mass value="1.8001224559704576"/>
+    <inertia ixx="0.001935" iyy="0.003387" izz="0.001935" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.478955 0.014275 -0.026" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file:////home/msc-gang/ros_noetic/src/Assembly_description/meshes/wheel_front_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.478955 0.014275 -0.026" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file:////home/msc-gang/ros_noetic/src/Assembly_description/meshes/wheel_front_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Revolute_40" type="continuous">
+  <origin xyz="0.478955 0.253074 0.008" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rotator_left_1"/>
+  <axis xyz="-0.0 -0.0 1.0"/>
+  <limit lower="-3.14159" upper="3.14159" effort="5" velocity="1"/>
+</joint>
+
+<joint name="Revolute_41" type="continuous">
+  <origin xyz="0.478955 0.007025 0.008" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rotator_right_1"/>
+  <axis xyz="0.0 -0.0 -1.0"/>
+  <limit lower="-3.14159" upper="3.14159" effort="5" velocity="1"/>
+</joint>
+
+<joint name="Revolute_42" type="continuous">
+  <origin xyz="0.114 0.2698 0.0205" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel_back_left_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Revolute_43" type="continuous">
+  <origin xyz="0.114 -0.0098 0.0205" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel_back_right_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Revolute_44" type="continuous">
+  <origin xyz="0.0 0.0213 0.018" rpy="0 0 0"/>
+  <parent link="rotator_left_1"/>
+  <child link="wheel_front_left_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Revolute_45" type="continuous">
+  <origin xyz="0.0 -0.0213 0.018" rpy="0 0 0"/>
+  <parent link="rotator_right_1"/>
+  <child link="wheel_front_right_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+</robot>
